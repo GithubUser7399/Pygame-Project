@@ -9,13 +9,12 @@ from scripts.tilemap import Tilemap
 class Game:
     def __init__(self):
         pygame.init()
-
         pygame.display.set_caption('ninga game <3')
         self.screen = pygame.display.set_mode((640,480))
         self.display = pygame.Surface((320, 240))
 
         self.clock = pygame.time.Clock()
-
+    
         self.movement = [False, False]
 
         self.assets = {
@@ -59,4 +58,5 @@ class Game:
             pygame.display.update()
             self.clock.tick(60)
 
-Game().run()
+my_game = Game()
+my_game.run()
